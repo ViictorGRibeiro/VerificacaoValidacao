@@ -1,5 +1,3 @@
-# --- Algoritmo de Média em Python (versão com defeito) ---
-
 soma = 0.0
 qtde = 0
 resp = 's'
@@ -8,6 +6,7 @@ print("Algoritmo para calcular a média dos números digitados.")
 
 while resp == 's' or resp == 'S':
     entrada = input("Digite um número: ")
+    
     try:
         num = float(entrada)
         soma = soma + num
@@ -16,7 +15,8 @@ while resp == 's' or resp == 'S':
         print("Entrada inválida. Por favor, digite um número válido.")
         continue
 
-   
+    resp = input("Deseja digitar outro número? (s/n): ")
+
 if qtde > 0:
     media = soma / qtde
     print(f"A média dos números digitados é: {media:.2f}")
